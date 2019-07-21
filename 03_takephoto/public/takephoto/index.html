@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>WebRTC capture video and audio</title>
+
+        <link rel="stylesheet" href="css/client.css"/>
+
+        <style>
+            .none {
+                -webkit-filter: none;	
+            }
+
+            .blur {
+                -webkit-filter: blur(3px);	
+            }
+
+            .grayscale {
+                -webkit-filter: grayscale(1); 	
+            }
+
+            .invert {
+                -webkit-filter: invert(1);	
+            }
+
+            .sepia {
+                -webkit-filter: sepia(1);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <div>
+                <label>Filter:</label>
+                <select id="filter">
+                    <option value="none">None</option>
+                    <option value="blur">blur</option>
+                    <option value="grayscale">Grayscale</option>
+                    <option value="invert">Invert</option>
+                    <option value="sepia">sepia</option>
+                </select>
+            </div>
+
+            <div>
+                <video autoplay playsinline id="player"></video>
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <button id="snapshot">Take snapshot</button>
+            </div>
+            <div>
+                <canvas id="picture"></canvas>
+            </div>
+        </section>
+
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="./js/client.js"></script>
+    </body>
+</html>
