@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>WebRTC capture video and audio</title>
+
+		<link rel="stylesheet" href="css/client.css"/>
+	</head>
+
+	<body>
+            <video autoplay playsinline id="player"></video>
+            <video playsinline id="recplayer"></video>
+
+            <button id="record">Start Record</button>
+            <button id="recplay" disabled>Play</button>
+            <button id="download" disabled>Download</button>
+
+            <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+            <script src="./js/client.js"></script>
+	</body>
+</html>
