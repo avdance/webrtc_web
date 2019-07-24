@@ -51,8 +51,6 @@ function start() {
 
 start();
 
-videoSource.onchange = start;
-
 function handleDataAvailable(e){
 	if(e && e.data && e.data.size > 0){
 	 	buffer.push(e.data);			
