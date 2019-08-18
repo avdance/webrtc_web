@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Realtime communication with WebRTC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <h1>Realtime communication with WebRTC</h1>
+
+  <video id="localVideo" autoplay playsinline></video>
+  <video id="remoteVideo" autoplay playsinline></video>
+
+  <div>
+    <button id="startButton">Start</button>
+    <button id="callButton">Call</button>
+    <button id="hangupButton">Hang Up</button>
+  </div>
+
+  <div class="graph-container" id="bitrateGraph">
+    <div>Bitrate</div>
+    <canvas id="bitrateCanvas"></canvas>
+  </div>
+  <div class="graph-container" id="packetGraph">
+    <div>Packets sent per second</div>
+    <canvas id="packetCanvas"></canvas>
+  </div>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/client.js"></script>
+  <script src="js/third_party/graph.js"></script>
+
+</body>
+</html>
