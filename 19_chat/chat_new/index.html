@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>WebRTC PeerConnection</title>
+		<link href="./css/main.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div>
+
+			<div>
+				<button id="connserver">Connect Sig Server</button>
+				<button id="leave" disabled>Leave</button>	
+			</div>
+
+      <!--
+			<div>
+				<label>BandWidth:</label>
+				<select id="bandwidth" disabled>
+					<option value="unlimited" selected>unlimited</option>
+					<option value="2000">2000</option>
+					<option value="1000">1000</option>
+					<option value="500">500</option>
+					<option value="250">250</option>
+					<option value="125">125</option>
+				</select>
+				kbps
+			</div>
+      -->
+
+
+			<div class="preview">
+        <!--
+				<div>
+					<h2>Local:</h2>
+					<video id="localvideo" autoplay playsinline muted></video>
+
+					<h2>Remote:</h2>
+					<video id="remotevideo" autoplay playsinline></video>
+				</div>
+        -->
+
+				<div>
+					<h2>Chat:</h2>
+					<textarea id="chat" disabled></textarea>
+					<textarea id="sendtxt" disabled></textarea>
+					<button id="send" disabled>Send</button>
+				</div>
+
+
+			</div>
+
+      <!--
+			<div class="preview">
+				<div class="graph-container" id="bitrateGraph">
+					<div>Bitrate</div>
+					<canvas id="bitrateCanvas"></canvas>
+				</div>
+				<div class="graph-container" id="packetGraph">
+					<div>Packets sent per second</div>
+					<canvas id="packetCanvas"></canvas>
+				</div>
+			</div>
+      -->
+
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<script src="js/main_bw.js"></script>
+		<script src="js/third_party/graph.js"></script>
+	</body>
+</html>
