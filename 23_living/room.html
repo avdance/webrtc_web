@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>WebRTC PeerConnection</title>
+		<link href="./css/main.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div>
+
+
+			<div>
+				<button id="connserver">Connect Sig Server</button>
+				<!--<button id="start" disabled>Start</button>	
+				<button id="call" disabled>Call</button>	
+				<button id="hangup" disabled>HangUp</button>	
+				-->
+				<button id="leave" disabled>Leave</button>	
+			</div>
+
+			<div>
+				<input id="shareDesk" type="checkbox"/><label for="shareDesk">Share Desktop</label>
+			</div>
+
+
+			<div id="preview">
+				<div >
+					<h2>Local:</h2>
+					<video id="localvideo" autoplay playsinline muted></video>
+					<h2>Offer SDP:</h2>
+					<textarea id="offer"></textarea>
+				</div>
+				<div>
+					<h2>Remote:</h2>
+					<video id="remotevideo" autoplay playsinline></video>
+					<h2>Answer SDP:</h2>
+					<textarea id="answer"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
